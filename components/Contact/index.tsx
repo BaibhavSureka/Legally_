@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import React from "react";
-import emailjs from 'emailjs-com';
 
 const Contact = () => {
   /**
@@ -16,20 +16,6 @@ const Contact = () => {
     return null;
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // You should replace these values with your own EmailJS template ID and user ID
-        emailjs.sendForm('service_uugu03q', 'template_kc5fuss', e.target, 'o7PpbJU1tlTDACpw_')
-
-      .then((result) => {
-        console.log(result.text);
-        // Optionally, you can add success message or redirection here
-      }, (error) => {
-        console.log(error.text);
-        // Handle error if sending fails
-      });
-  };
-
   return (
     <>
       {/* <!-- ===== Contact Start ===== --> */}
@@ -37,6 +23,7 @@ const Contact = () => {
         <div className="relative mx-auto max-w-c-1390 px-7.5 pt-10 lg:px-15 lg:pt-15 xl:px-20 xl:pt-20">
           <div className="absolute left-0 top-0 -z-1 h-2/3 w-full rounded-lg bg-gradient-to-t from-transparent to-[#dee7ff47] dark:bg-gradient-to-t dark:to-[#252A42]"></div>
           
+
           <div className="flex flex-col-reverse flex-wrap gap-8 md:flex-row md:flex-nowrap md:justify-between xl:gap-20">
             <motion.div
               variants={{
@@ -44,6 +31,7 @@ const Contact = () => {
                   opacity: 0,
                   y: -20,
                 },
+
                 visible: {
                   opacity: 1,
                   y: 0,
@@ -59,18 +47,19 @@ const Contact = () => {
                Let us know 
               </h2>
 
-              <form onSubmit={handleSubmit}>
+              <form
+                action="https://formbold.com/s/unique_form_id"
+                method="POST"
+              >
                 <div className="mb-7.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
                   <input
                     type="text"
-                    name="name"
                     placeholder="Full name"
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                   />
 
                   <input
                     type="email"
-                    name="email"
                     placeholder="Email address"
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                   />
@@ -79,14 +68,12 @@ const Contact = () => {
                 <div className="mb-12.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
                   <input
                     type="text"
-                    name="subject"
                     placeholder="Subject"
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                   />
 
                   <input
                     type="text"
-                    name="phone_no"
                     placeholder="Phone number"
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                   />
@@ -94,7 +81,6 @@ const Contact = () => {
 
                 <div className="mb-11.5 flex">
                   <textarea
-                    name="message"
                     placeholder="Message"
                     rows={4}
                     className="w-full border-b border-stroke bg-transparent focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
@@ -129,12 +115,11 @@ const Contact = () => {
                       htmlFor="default-checkbox"
                       className="flex max-w-[425px] cursor-pointer select-none pl-5"
                     >
-                      By clicking Checkbox, you agree to get contacted by us for further communication.
+                      By clicking Checkbox, you agree to get contacted by us for product related updates.
                     </label>
                   </div>
 
                   <button
-                    type="submit"
                     aria-label="send message"
                     className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark"
                   >
