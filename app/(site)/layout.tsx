@@ -7,6 +7,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import { ThemeProvider } from "next-themes";
 import { Inter,Raleway,Carme } from "next/font/google";
 import "../globals.css";
+import {HoverEffect} from "@/components/ui/card-hover-effect";
 const inter = Inter({ subsets: ["latin"] });
 const oswald = Raleway({ subsets: ["latin"] });
 const carme = Carme({ weight: "400", subsets: ["latin"] });
@@ -28,6 +29,7 @@ export default function RootLayout({
           <Lines />
           <Header />
           <ToasterContext />
+          {/* <HoverEffect /> */}
           {children}
           {/* <Footer /> */}
           {/* <ScrollToTop /> */}
