@@ -26,7 +26,7 @@ export const automationServices = [
     title: "Upload Papers",
     description:
       "Access expert help, Upload your case papers to connect with a skilled lawyer today, trust us we will keep your documents securely.",
-    link:"/chat"
+    link:"/talk"
   },
   
 ];
