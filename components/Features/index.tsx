@@ -14,16 +14,19 @@ export const automationServices = [
     title: "User",
     description:
       "Custom trained on your business data, the AI bots gather and store accurate user information.",
+    link:"/chat"
   },
   {
     title: "Advocate",
     description:
       "Join the cause, Advocate engagement amplifies our mission to democratize legal assistance.",
+    link:"/chat"
   },
   {
     title: "Upload Papers",
     description:
       "Access expert help, Upload your case papers to connect with a skilled lawyer today, trust us we will keep your documents securely.",
+    link:"/chat"
   },
   
 ];
