@@ -11,22 +11,21 @@ export function Feature() {
 
 export const automationServices = [
   {
-    title: "User",
+    title: "Chat with your AI Lawyer",
     description:
-      "Custom trained on your business data, the AI bots gather and store accurate user information.",
-    link:"/chat"
+      "Engage in a conversation with an expert AI lawyer to discuss your legal matters.",
+    link: "/chat"
   },
   {
     title: "Consult about your documents",
     description:
-      "Chat with your personal AI Lawyer about your documents.",
-    link:"/chat"
+      "Have a chat with your personal AI Lawyer to seek advice and guidance regarding your legal documents.",
+    link: "/chat"
   },
   {
-    title: "Talk to your lawyer",
+    title: "Talk to your lawyer On-Call",
     description:
-      "Access expert help, on a phone call and get your legal queries resolved.",
-    link:"/talk"
+      "Get access to expert legal help by scheduling a phone call with a professional lawyer to resolve your legal queries.",
+    link: "/talk"
   },
-  
 ];
