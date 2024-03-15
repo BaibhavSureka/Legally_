@@ -8,7 +8,7 @@ const Integration = () => {
     <>
       <section>
       <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
-  {/* <!-- Section Title Start --> */}
+  {}
   <SectionHeader
     headerInfo={{
       title: `Law for All`,
@@ -16,7 +16,7 @@ const Integration = () => {
       description: `The Indian Constitution is not just a document; it's a shield of rights for every citizen, now made accessible through Legally.`,
     }}
   />
-  {/* <!-- Section Title End --> */}
+  {}
 </div>
 
 

@@ -13,7 +13,7 @@ const Hero = () => {
     <>
       <section>
         <div className="custom-screen mt-0 mb-10 py-28 pb-0 bg-#202122 text-gray-600">
-          {/* <LampDemo /> */}
+          {}
           <div className="space-y-5 max-w-4xl mx-auto text-center">
             <h1 className="text-4xl text-gray-800 font-extrabold mx-auto sm:text-6xl">
               Legally: Your Legal Companion, Always Ready.
@@ -25,7 +25,7 @@ const Hero = () => {
               <Button
                 className="text-white bg-gray-800 hover:bg-gray-600 active:bg-gray-900"
                 onClick={() => {
-                  // Handle Button click
+                  
                 }}
               >
                 Let's Talk
@@ -33,7 +33,7 @@ const Hero = () => {
               <Button
                 className="text-gray-700 border hover:bg-gray-50"
                 onClick={() => {
-                  // Handle Button click
+              
                 }}
               >
                 Learn More

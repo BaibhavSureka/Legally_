@@ -41,7 +41,7 @@ const Header = () => {
             <h1 className="text-3xl text-white font-semibold">Legally</h1>
           </a>
 
-          {/* <!-- Hamburger Toggle BTN --> */}
+          {}
           <button
             aria-label="hamburger Toggler"
             className=" xl:hidden hidden"
@@ -79,10 +79,10 @@ const Header = () => {
               </span>
             </span>
           </button>
-          {/* <!-- Hamburger Toggle BTN --> */}
+          {}
         </div>
 
-        {/* Nav Menu Start   */}
+        {}
         <div
           className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${
             navigationOpen &&
@@ -139,15 +139,10 @@ const Header = () => {
           </nav>
 
           <div className="mt-7 flex items-center gap-6 xl:mt-0">
-            {/* <ThemeToggler /> */}
+            {}
 
             
-            {/* <Link
-              href="https://nextjstemplates.com/templates/solid"
-              className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-primaryho"
-            >
-              Get Pro 🔥
-            </Link> */}
+            {}
           </div>
         </div>
       </div>
@@ -155,6 +150,6 @@ const Header = () => {
   );
 };
 
-// w-full delay-300
+
 
 export default Header;
