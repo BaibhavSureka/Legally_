@@ -16,9 +16,9 @@ import Footer from "@/components/Footer";
 import { LampDemo } from "@/components/ui/lamp";
 import { Feature } from "@/components/Features";
 export const metadata: Metadata = {
-  title: "Transform Your Business with Lumiora's Automation Solutions",
-  description: "Discover Lumiora's cutting-edge automation services. From custom chat bots to zero-latency call handling, elevate your productivity today.",
-  keywords: "automation solutions, custom chat bots, zero latency call handling, Lumiora",
+  title: "Legally",
+  description: "A legal webapp, which is always ready to guide you with all the legal related issues.",
+  keywords: "automation solutions, custom chat bots, zero latency call handling",
 };
 export default function Home() {
   return (
