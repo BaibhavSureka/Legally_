@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from 'react';
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -6,25 +6,29 @@ import { Button } from "@/components/ui/button";
 
 const CardWithInput = () => {
     const [phone, setPhone] = useState("");
+    const [buttonText, setButtonText] = useState("Talk to Lawyer"); 
+    const [buttonColor, setButtonColor] = useState("primary"); 
+    const [buttonDisabled, setButtonDisabled] = useState(false); 
 
     const handleSubmit = () => {
-        // Create the payload object
+       
         const payload = {
             phone: phone
         };
 
-        // Send the POST request
         fetch("http://localhost:8000/talk", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(payload)
-        })
-            
+        });
+
+        setButtonText("You will get a call from your AI expert lawyer in a Minute");
+        setButtonColor("gray");
+        setButtonDisabled(true);
     };
-    console.log(phone);
-    console.log()
+
     return (
         <div className='mt-50 m-40 p-50'>
             <Card className="mx-auto mt-10">
@@ -36,7 +40,9 @@ const CardWithInput = () => {
                     />
                 </CardContent>
                 <CardFooter className="flex justify-end">
-                    <Button onClick={handleSubmit}>Submit</Button>
+                    <Button onClick={handleSubmit} color={buttonColor} disabled={buttonDisabled}>
+                        {buttonText}
+                    </Button>
                 </CardFooter>
             </Card>
         </div>

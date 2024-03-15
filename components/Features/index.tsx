@@ -17,15 +17,15 @@ export const automationServices = [
     link:"/chat"
   },
   {
-    title: "Advocate",
+    title: "Consult about your documents",
     description:
-      "Join the cause, Advocate engagement amplifies our mission to democratize legal assistance.",
+      "Chat with your personal AI Lawyer about your documents.",
     link:"/chat"
   },
   {
-    title: "Upload Papers",
+    title: "Talk to your lawyer",
     description:
-      "Access expert help, Upload your case papers to connect with a skilled lawyer today, trust us we will keep your documents securely.",
+      "Access expert help, on a phone call and get your legal queries resolved.",
     link:"/talk"
   },
   
