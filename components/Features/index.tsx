@@ -20,7 +20,7 @@ export const automationServices = [
     title: "Consult about your documents",
     description:
       "Have a chat with your personal AI Lawyer to seek advice and guidance regarding your legal documents.",
-    link: "/chat"
+    link: ""
   },
   {
     title: "Talk to your lawyer On-Call",
