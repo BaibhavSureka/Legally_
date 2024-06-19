@@ -1,5 +1,7 @@
 Legally: Empowering Access to Legal Knowledge
 
+![image](https://github.com/BaibhavSureka/Legally_/assets/83425243/3d1e7fa5-e1a6-4a1b-aa7a-917f29579b0b)
+
 
 Overview
 
