@@ -1,34 +1,126 @@
 Legally: Empowering Access to Legal Knowledge
 
+Legally is a full-stack AI-powered legal assistant focused exclusively on Indian law, court cases, and the Indian judiciary. It empowers users to interact with legal documents, ask legal questions, and even get voice-based legal help—all through a modern web interface.
+
 ![image](https://github.com/BaibhavSureka/Legally_/assets/83425243/3d1e7fa5-e1a6-4a1b-aa7a-917f29579b0b)
 
+---
 
-Overview
+## 🚀 Features
 
-In today's India, navigating the legal system can be daunting and complex for many individuals. Lack of awareness about legal rights and procedures often leaves people feeling intimidated and unsure of where to seek help. Recognizing this challenge, we introduce Legally, a pioneering project aimed at breaking down barriers to legal access and empowering individuals to understand and assert their rights effectively.
+- **Chat with PDF:** Upload Indian legal documents (court cases, notices, contracts, etc.) and ask questions about their content.
+- **AI Chatbot:** Get answers to general legal questions about Indian law, the Indian Constitution, and Indian legal procedures.
+- **Call Bot:** Voice-based legal assistant for real-time legal help (Indian law only).
 
-Purpose
+---
 
-Legally leverages cutting-edge technology, specifically AI-powered Legal Language Models (LLM), to provide accessible and user-friendly legal assistance. Our platform bridges the gap between the intricacies of the law and the everyday person, offering clear and understandable guidance in local languages. By utilizing the complete Indian Constitution, alongside the latest laws, bills, and court decisions, Legally ensures users receive accurate and up-to-date information.
+## 🏗️ Tech Stack
 
-Features
+- **Frontend:** Next.js (React), Tailwind CSS, React-Markdown
+- **Backend:** Python (FastAPI), Google Gemini (Generative AI), LangChain, PyPDF2
+- **Vector Search:** FAISS (local) or Pinecone (cloud)
+- **Voice/Call:** Bland.ai (API integration)
+- **Deployment:** Vercel (frontend), Render (backend)
 
-User-friendly Interface: Users can interact with Legally through text or voice input in their preferred language, making legal information easily accessible and understandable.
-Personalized Solutions: Legally generates personalized solutions to users' legal queries or concerns, ensuring tailored guidance for each individual's situation.
-Direct Access to Lawyers: For critical cases requiring further assistance, users can access professional lawyers through the platform, free of charge, ensuring comprehensive support.
-Legal Updates Dashboard: Legally features a dashboard highlighting newly enacted laws and significant legal developments, keeping users informed about changes that may impact them.
+---
 
-How It Works
+## 🖥️ System Architecture
 
-Input Query: Users input their legal queries or concerns through text or voice input in their preferred language.
-AI Assistance: Legally generates personalized solutions based on the provided information, offering clear and accurate guidance.
-Access to Legal Experts: For complex cases or additional clarification, users can connect directly to professional lawyers through the platform.
-Stay Informed: Users can stay updated on legal developments and changes through Legally's dashboard, ensuring ongoing awareness of relevant legal information.
+```mermaid
+flowchart TD
+    A["User"] -- "Uploads PDF/Asks Question" --> B["Frontend (Next.js)"]
+    B -- "Sends request" --> C["Backend (FastAPI, Python)"]
+    C -- "Embedding/LLM" --> D["Gemini/LangChain"]
+    C -- "Vector Search" --> E["FAISS/Pinecone"]
+    C -- "PDF Parsing" --> F["PDF Parser"]
+    C -- "Speech APIs" --> G["Bland.ai"]
+    C -- "Returns answer" --> B
+    B -- "Shows answer" --> A
+```
 
-Impact
+---
 
-Imagine a teenager facing a sensitive issue but feeling too afraid or embarrassed to seek help. With Legally, she can access clear and confidential advice in her own language, empowering her to make informed decisions and seek necessary support.
+## 📂 Key Files & Directories
 
-Get Involved
+- `app/(site)/chat/` – Chat UI for AI chatbot
+- `app/(site)/consult/` – PDF Q&A (upload and ask about legal docs)
+- `app/(site)/talk/` – Call bot (voice legal assistant)
+- `bot/app.py` – Main FastAPI backend (all endpoints)
+- `bot/langchain_helper.py` – Handles Gemini, vector search, and PDF logic
+- `bot/requirements.txt` – Backend dependencies
 
-Legally welcomes collaboration and support from legal experts, developers, and organizations committed to promoting access to justice and legal empowerment. Join us in our mission to make legal assistance accessible to all.
+---
+
+## ⚡ Quickstart
+
+### 1. Backend (FastAPI + Gemini)
+
+```bash
+cd bot
+python -m venv venv
+venv\Scripts\activate  # Windows
+pip install -r requirements.txt
+# Set your environment variables (see below)
+uvicorn app:app --reload
+```
+
+**Environment variables required:**
+
+- `GEMINI_API_KEY` (Google Gemini API key)
+- `BLAND_API_KEY` (Bland.ai API key, for call bot)
+
+Set these in a `.env` file or your deployment dashboard.
+
+---
+
+### 2. Frontend (Next.js)
+
+```bash
+npm install
+npm run dev
+# Visit http://localhost:3000
+```
+
+Update API URLs in the frontend to point to your deployed backend (e.g., `https://legally.onrender.com`).
+
+---
+
+### 3. Call Bot
+
+- The call bot is integrated via the `/talk` endpoint and uses Bland.ai.
+- Make sure your `BLAND_API_KEY` is set in the backend environment.
+
+---
+
+## 🌐 Deployment
+
+- **Frontend:** Deploy on [Vercel](https://vercel.com/)  
+  (e.g., https://legally-9kei.vercel.app/)
+- **Backend:** Deploy on [Render](https://render.com/)  
+  (e.g., https://legally.onrender.com)
+- Set all required environment variables in your deployment dashboards.
+
+---
+
+## 🔒 Security & Best Practices
+
+- **API keys** are loaded from environment variables—never hardcode secrets in code.
+- **CORS** is configured to allow only your deployed frontend.
+- **AI answers** are strictly limited to Indian law, Indian court cases, and the Indian judiciary. Non-legal or foreign queries are politely refused.
+
+---
+
+## 🤝 Get Involved
+
+Legally welcomes collaboration from legal experts, developers, and organizations committed to access to justice in India.  
+**Contact:** baibhavsureka1@gmail.com
+
+---
+
+## 📜 License
+
+MIT License (or your preferred license)
+
+---
+
+**Legally: Empowering Access to Indian Legal Knowledge for All.**
